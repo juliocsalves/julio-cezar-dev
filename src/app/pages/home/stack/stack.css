@@ -1,0 +1,116 @@
+.stack {
+  padding: 8rem 0;
+}
+
+.stack-header {
+  max-width: 700px;
+
+  margin: 0 auto 4rem;
+
+  text-align: center;
+}
+
+.stack-badge {
+  display: inline-block;
+
+  margin-bottom: 1rem;
+
+  color: var(--color-secondary);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.stack-header h2 {
+  margin-bottom: 1.5rem;
+
+  font-family: var(--font-heading);
+
+  font-size: 2rem;
+
+  line-height: 1.4;
+}
+
+.stack-header p {
+  color: var(--color-text-muted);
+
+  line-height: 1.8;
+}
+
+.stack-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
+  gap: 1.5rem;
+}
+
+.stack-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+
+  padding: 2rem;
+
+  min-height: 170px;
+
+  background: var(--color-surface);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 18px;
+
+  transition: all .3s ease;
+
+  cursor: default;
+}
+
+.stack-card:hover {
+  transform: translateY(-6px);
+
+  border-color: var(--color-secondary);
+
+  box-shadow: 0 15px 35px rgba(168, 85, 247, .15);
+}
+
+.stack-card i {
+  font-size: 3rem;
+
+  color: var(--color-secondary);
+
+  transition: .3s;
+}
+
+.stack-card:hover i {
+  transform: scale(1.08);
+
+  text-shadow: 0 0 18px rgba(168, 85, 247, .35);
+}
+
+.stack-card span {
+  font-family: var(--font-heading);
+
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  text-align: center;
+}
+
+.stack-logo {
+  width: 52px;
+  height: 52px;
+
+  object-fit: contain;
+
+  transition: all .3s ease;
+}
+
+.stack-card:hover .stack-logo {
+  transform: scale(1.08);
+}
