@@ -1,1 +1,108 @@
-/* You can add global styles to this file, and also import other style files */
+/* ==========================================
+   IMPORTS
+========================================== */
+
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ==========================================
+   THEME
+========================================== */
+
+:root {
+  --color-bg: #0a0a0b;
+  --color-surface: #111113;
+  --color-border: #1f1f23;
+
+  --color-text: #fafafa;
+  --color-text-muted: #a1a1aa;
+
+  --color-primary: #3b82f6;
+  --color-secondary: #a855f7;
+
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
+}
+
+
+/* ==========================================
+   GLOBAL
+========================================== */
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  font-family: var(--font-body);
+
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* ==========================================
+   SHARED COMPONENTS
+========================================== */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo-symbol {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  line-height: 1;
+}
+
+.brand-text h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+
+  background: linear-gradient(
+    90deg,
+    var(--color-text),
+    var(--color-secondary)
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-text p {
+  margin-top: 0.25rem;
+  font-size: 1rem;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================
+   LAYOUT
+========================================== */
+
+.container {
+  width: min(1200px, 100% - 4rem);
+  margin: 0 auto;
+}
