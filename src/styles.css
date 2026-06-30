@@ -2,10 +2,9 @@
    IMPORTS
 ========================================== */
 
-@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import "bootstrap-icons/font/bootstrap-icons.css";
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap");
 
 /* ==========================================
    RESET
@@ -20,7 +19,6 @@
 html {
   scroll-behavior: smooth;
 }
-
 
 /* ==========================================
    THEME
@@ -37,10 +35,9 @@ html {
   --color-primary: #3b82f6;
   --color-secondary: #a855f7;
 
-  --font-body: 'Inter', sans-serif;
-  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
 }
-
 
 /* ==========================================
    GLOBAL
@@ -49,11 +46,11 @@ html {
 html,
 body {
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 body {
   font-family: var(--font-body);
-
   background: var(--color-bg);
   color: var(--color-text);
 }
@@ -82,11 +79,9 @@ body {
   font-weight: 700;
   line-height: 1;
 
-  background: linear-gradient(
-    90deg,
-    var(--color-text),
-    var(--color-secondary)
-  );
+  background: linear-gradient(90deg,
+      var(--color-text),
+      var(--color-secondary));
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -103,6 +98,18 @@ body {
 ========================================== */
 
 .container {
-  width: min(1200px, 100% - 4rem);
-  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 768px) {
+  .container {
+    padding-inline: 1rem;
+  }
 }

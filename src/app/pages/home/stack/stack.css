@@ -114,3 +114,99 @@
 .stack-card:hover .stack-logo {
   transform: scale(1.08);
 }
+
+/* ==========================================
+   TABLET (769px até 1024px)
+========================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .stack {
+    padding: 6rem 0;
+  }
+
+  .stack-header {
+    margin-bottom: 3rem;
+  }
+
+  .stack-header h2 {
+    font-size: 1.9rem;
+  }
+
+  .stack-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .stack-card {
+    min-height: 155px;
+    padding: 1.6rem 1rem;
+    gap: .9rem;
+  }
+
+  .stack-card i {
+    font-size: 2.7rem;
+  }
+
+  .stack-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .stack-card span {
+    font-size: 1rem;
+  }
+
+}
+
+/* ==========================================
+   MOBILE (até 768px)
+========================================== */
+
+@media (max-width: 768px) {
+  .stack {
+    padding: 4rem 0;
+  }
+
+  .stack-header {
+    margin-bottom: 2rem;
+  }
+
+  .stack-badge {
+    font-size: 0.8rem;
+  }
+
+  .stack-header h2 {
+    font-size: 1.7rem;
+    line-height: 1.3;
+  }
+
+  .stack-header p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .stack-card {
+    min-height: 140px;
+    padding: 1.4rem 1rem;
+    gap: 0.8rem;
+  }
+
+  .stack-card i {
+    font-size: 2.4rem;
+  }
+
+  .stack-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .stack-card span {
+    font-size: 1rem;
+  }
+}
