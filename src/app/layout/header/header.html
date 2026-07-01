@@ -1,4 +1,4 @@
-<header>
+<header [class.scrolled]="isScrolled" [class.menu-open]="isMenuOpen">
   <div class="container header-content">
     <div class="brand">
       <span class="logo-symbol">&lt;/&gt;</span>
@@ -10,24 +10,42 @@
     </div>
 
     <nav class="menu">
-      <a href="#">Início</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#stack">Stack</a>
-      <a href="#sobre">Sobre</a>
+      <a href="#inicio" [class.active]="activeSection === 'inicio'">Início</a>
+      <a href="#projetos" [class.active]="activeSection === 'projetos'">Projetos</a>
+      <a href="#stack" [class.active]="activeSection === 'stack'">Stack</a>
+      <a href="#sobre" [class.active]="activeSection === 'sobre'">Sobre</a>
     </nav>
 
-    <a
-      class="contact-button"
+    <a class="contact-button"
       href="https://wa.me/5547992527514?text=Olá%20Julio!%20Gostaria%20de%20conversar%20sobre%20um%20projeto."
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+      target="_blank" rel="noopener noreferrer">
       <i class="bi bi-whatsapp"></i>
       Falar comigo
     </a>
 
-    <button class="menu-toggle" type="button" aria-label="Abrir menu">
-      <i class="bi bi-list"></i>
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Abrir menu"
+      (click)="toggleMenu()">
+      <i class="bi" [class.bi-list]="!isMenuOpen" [class.bi-x-lg]="isMenuOpen"></i>
     </button>
+
   </div>
+
+  <nav class="mobile-menu" [class.open]="isMenuOpen">
+    <a href="#inicio" [class.active]="activeSection === 'inicio'" (click)="closeMenu()">Início</a>
+    <a href="#projetos" [class.active]="activeSection === 'projetos'" (click)="closeMenu()">Projetos</a>
+    <a href="#stack" [class.active]="activeSection === 'stack'" (click)="closeMenu()">Stack</a>
+    <a href="#sobre" [class.active]="activeSection === 'sobre'" (click)="closeMenu()">Sobre</a>
+
+    <a class="mobile-contact-button"
+      href="https://wa.me/5547992527514?text=Olá%20Julio!%20Gostaria%20de%20conversar%20sobre%20um%20projeto."
+      target="_blank" rel="noopener noreferrer" (click)="closeMenu()">
+      <i class="bi bi-whatsapp"></i>
+      Falar comigo
+    </a>
+  </nav>
 </header>
+
+<div class="mobile-overlay" [class.open]="isMenuOpen" (click)="closeMenu()"></div>

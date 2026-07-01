@@ -37,6 +37,7 @@ html {
 
   --font-body: "Inter", sans-serif;
   --font-heading: "Space Grotesk", sans-serif;
+  --header-height: 90px;
 }
 
 /* ==========================================
